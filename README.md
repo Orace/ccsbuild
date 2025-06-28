@@ -16,7 +16,7 @@ This GitHub Action builds TI Code Composer Studio (CCS) projects using the comma
   uses: actions/checkout@v4
 
 - name: Build with CCS
-  uses: orace/ccsbuild@v0.1
+  uses: orace/ccsbuild@v0.2
   with:
     project-path: path/to/the/project
     configurations: Debug;Release
