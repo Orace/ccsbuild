@@ -1,0 +1,13 @@
+name: 'Build with Code Composer Studio'
+description: 'Initialize a CCS workspace and build project configurations'
+author: 'Orace'
+inputs:
+  project-path:
+    description: 'Relative path to the CCS project'
+    required: true
+  configurations:
+    description: 'Semicolon-separated list of build configurations'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
