@@ -5,7 +5,7 @@ branding:
   icon: 'box'
   color: 'red'
 inputs:
-  project-path:
+  project_path:
     description: 'Relative path to the CCS project'
     required: true
   configurations:
