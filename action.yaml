@@ -1,8 +1,9 @@
 name: 'Build with Code Composer Studio'
-icon: 'box'
-color: 'red'
 description: 'Initialize a CCS workspace and build project configurations'
 author: 'Orace'
+branding:
+  icon: 'box'
+  color: 'red'
 inputs:
   project-path:
     description: 'Relative path to the CCS project'
