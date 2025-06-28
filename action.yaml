@@ -1,4 +1,6 @@
 name: 'Build with Code Composer Studio'
+icon: box
+color: red
 description: 'Initialize a CCS workspace and build project configurations'
 author: 'Orace'
 inputs:
