@@ -29,7 +29,8 @@ jobs:
       - name: Build and push image for ${{ matrix.product_family }}
         uses: docker/build-push-action@v5
         with:
-          context: ./${{ matrix.product_family }}
+          context: .
+          file: ${{ matrix.product_family }}/Dockerfile
           push: true
           tags: ghcr.io/orace/ccsbuild-${{ matrix.product_family }}:0.2
           
