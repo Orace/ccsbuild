@@ -5,6 +5,9 @@ branding:
   icon: 'box'
   color: 'red'
 inputs:
+  product_family:
+    description: 'TI product family (e.g., c28)'
+    required: true
   project_path:
     description: 'Relative path to the CCS project'
     required: true
@@ -13,5 +16,5 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/orace/ccsbuild:0.2'
+  image: 'docker://ghcr.io/orace/ccsbuild-c28:0.2'
   entrypoint: '/entrypoint.sh'
