@@ -1,10 +1,7 @@
-name: Build and Push Docker Image
+name: Build and Push Docker Images
 
 on:
-  push:
-    paths:
-      - 'Dockerfile'
-      - '.github/workflows/docker-publish.yml'
+  workflow_run:
 
 jobs:
   build-and-push:
@@ -13,6 +10,10 @@ jobs:
     permissions:
       packages: write
       contents: read
+
+    strategy:
+      matrix:
+        product_family: [c28]
 
     steps:
       - name: Checkout repository
@@ -25,10 +26,10 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push image
+      - name: Build and push image for ${{ matrix.product_family }}
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./${{ matrix.product_family }}
           push: true
-          tags: ghcr.io/orace/ccsbuild:0.2
+          tags: ghcr.io/orace/ccsbuild-${{ matrix.product_family }}:0.2
           
