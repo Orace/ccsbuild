@@ -1,0 +1,20 @@
+name: 'Build with CCS PF_C28'
+description: 'Build firmware for C28 family'
+author: 'Orace'
+branding:
+  icon: 'box'
+  color: 'red'
+
+inputs:
+  project_path:
+    description: 'Relative path to CCS project'
+    required: true
+  configurations:
+    description: 'Semicolon-separated build configurations'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'ghcr.io/orace/ccsbuild-c28:0.2'
+  entrypoint: '/entrypoint.sh'
+  
