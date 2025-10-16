@@ -21,7 +21,7 @@ RUN mkdir -p /tmp/ccs && \
     wget -q https://dr-download.ti.com/software-development/ide-configuration-compiler-or-debugger/MD-J1VdearkvK/20.3.1/CCS_20.3.1.00005_linux.zip && \
     unzip CCS_20.3.1.00005_linux.zip && \
     cd CCS_20.3.1.00005_linux && \
-    ./CCS_20.3.1.00005_linux.run --mode unattended --enable-components PF_C28 && \
+    ./ccs_setup_20.3.1.00005.run --mode unattended --enable-components PF_C28 && \
     mkdir -p /tmp/C2000 && \
     cd /tmp/C2000 && \
     wget -q http://pierre.lando.free.fr/TI/C2000Ware_6_00_00_00_setup.run && \
