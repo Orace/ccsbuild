@@ -4,7 +4,7 @@ set -e
 WORKSPACE="/tmp/workspace"
 PROJECT_PATH="$GITHUB_WORKSPACE/$INPUT_PROJECT_PATH"
 CONFIGURATIONS="$INPUT_CONFIGURATIONS"
-CCS_CLI="/root/ti/ccs2020/ccs/eclipse/ccs-server-cli.sh"
+CCS_CLI="/root/ti/ccs2031/ccs/eclipse/ccs-server-cli.sh"
 
 echo "🔧 Initializing CCS workspace at $WORKSPACE"
 "$CCS_CLI" -workspace "$WORKSPACE" \

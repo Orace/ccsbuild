@@ -16,5 +16,5 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/orace/ccsbuild-c28:0.2'
+  image: 'docker://ghcr.io/orace/ccsbuild-c28:0.3'
   entrypoint: '/entrypoint.sh'

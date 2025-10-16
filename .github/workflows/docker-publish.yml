@@ -32,5 +32,5 @@ jobs:
           context: .
           file: ${{ matrix.product_family }}/Dockerfile
           push: true
-          tags: ghcr.io/orace/ccsbuild-${{ matrix.product_family }}:0.2
+          tags: ghcr.io/orace/ccsbuild-${{ matrix.product_family }}:0.3
           
