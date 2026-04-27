@@ -24,9 +24,9 @@ RUN mkdir -p /tmp/ccs && \
     ./ccs_setup_20.5.0.00028.run --mode unattended --enable-components PF_C28 && \
     mkdir -p /tmp/C2000 && \
     cd /tmp/C2000 && \
-    wget -q http://pierre.lando.free.fr/TI/C2000Ware_6_00_00_00_setup.run && \
-    chmod +x C2000Ware_6_00_00_00_setup.run && \
-    ./C2000Ware_6_00_00_00_setup.run --mode unattended && \
+    wget -q http://pierre.lando.free.fr/TI/C2000Ware_26_00_00_00_STS_setup.run && \
+    chmod +x C2000Ware_26_00_00_00_STS_setup.run && \
+    ./C2000Ware_26_00_00_00_STS_setup.run --mode unattended && \
     cd / && \
     rm -rf /tmp/*
 
