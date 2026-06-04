@@ -18,15 +18,15 @@ RUN printf '%s\n' '#!/bin/sh' 'echo "Fake udev service."' 'exit 0' > /etc/init.d
 # Install CCS and C2000Ware
 RUN mkdir -p /tmp/ccs && \
     cd /tmp/ccs && \
-    wget -q https://dr-download.ti.com/software-development/ide-configuration-compiler-or-debugger/MD-J1VdearkvK/20.5.0/CCS_20.5.0.00028_linux.zip && \
-    unzip CCS_20.5.0.00028_linux.zip && \
-    cd CCS_20.5.0.00028_linux && \
-    ./ccs_setup_20.5.0.00028.run --mode unattended --enable-components PF_C28 && \
+    wget -q https://dr-download.ti.com/software-development/ide-configuration-compiler-or-debugger/MD-J1VdearkvK/20.5.1/CCS_20.5.1.00012_linux.zip && \
+    unzip CCS_20.5.1.00012_linux.zip && \
+    cd CCS_20.5.1.00012_linux && \
+    ./ccs_setup_20.5.1.00012.run --mode unattended --enable-components PF_C28 && \
     mkdir -p /tmp/C2000 && \
     cd /tmp/C2000 && \
-    wget -q http://pierre.lando.free.fr/TI/C2000Ware_26_00_00_00_STS_setup.run && \
-    chmod +x C2000Ware_26_00_00_00_STS_setup.run && \
-    ./C2000Ware_26_00_00_00_STS_setup.run --mode unattended && \
+    wget -q http://pierre.lando.free.fr/TI/C2000Ware_26_01_00_00_STS_setup.run && \
+    chmod +x C2000Ware_26_01_00_00_STS_setup.run && \
+    ./C2000Ware_26_01_00_00_STS_setup.run --mode unattended && \
     cd / && \
     rm -rf /tmp/*
 
